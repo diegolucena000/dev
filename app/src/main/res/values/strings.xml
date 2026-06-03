@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ramsons Metas</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_lancar">Lançar</string>
+    <string name="nav_historico">Histórico</string>
+    <string name="nav_config">Metas</string>
+</resources>

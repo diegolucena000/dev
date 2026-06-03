@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/card"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ramsons"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text"/>
+
+            <TextView
+                android:id="@+id/tv_mes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/muted"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_dias_restantes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/badge_accent"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:textSize="11sp"
+            android:textColor="@color/accent"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Resumo Bar -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/card2"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="VENDIDO NO MÊS" android:textSize="9sp" android:textColor="@color/muted"/>
+                <TextView android:id="@+id/tv_total_vendido" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="R$ 0"
+                    android:textSize="18sp" android:textStyle="bold" android:textColor="@color/text"/>
+            </LinearLayout>
+
+            <View android:layout_width="1dp" android:layout_height="40dp"
+                android:background="@color/border" android:layout_marginHorizontal="16dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="FALTA PARA METAS" android:textSize="9sp" android:textColor="@color/muted"/>
+                <TextView android:id="@+id/tv_falta_metas" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="—"
+                    android:textSize="18sp" android:textStyle="bold" android:textColor="@color/yellow"/>
+            </LinearLayout>
+
+            <View android:layout_width="1dp" android:layout_height="40dp"
+                android:background="@color/border" android:layout_marginHorizontal="16dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="NECESSÁRIO/DIA" android:textSize="9sp" android:textColor="@color/muted"/>
+                <TextView android:id="@+id/tv_por_dia" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="—"
+                    android:textSize="18sp" android:textStyle="bold" android:textColor="@color/accent"/>
+            </LinearLayout>
+
+            <View android:layout_width="1dp" android:layout_height="40dp"
+                android:background="@color/border" android:layout_marginHorizontal="16dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="METAS BATIDAS" android:textSize="9sp" android:textColor="@color/muted"/>
+                <TextView android:id="@+id/tv_metas_batidas" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="0/6"
+                    android:textSize="18sp" android:textStyle="bold" android:textColor="@color/green"/>
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Cards Grid -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_metas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp"
+        android:clipToPadding="false"/>
+
+</LinearLayout>

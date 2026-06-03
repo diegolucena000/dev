@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Metas Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/card"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🎯  Definir metas mensais"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Produtos -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🛍️ Produtos Vendidos" android:textColor="@color/text" android:textSize="14sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Meta em R$" android:textColor="@color/muted" android:textSize="11sp"/>
+                    </LinearLayout>
+                    <EditText android:id="@+id/et_meta_produtos" android:layout_width="120dp" android:layout_height="40dp"
+                        android:background="@drawable/input_bg" android:paddingHorizontal="10dp" android:hint="0"
+                        android:textColor="@color/text" android:textColorHint="@color/muted" android:inputType="numberDecimal" android:gravity="end"/>
+                </LinearLayout>
+
+                <!-- Garantia -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🛡️ Garantia Estendida" android:textColor="@color/text" android:textSize="14sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Meta em R$" android:textColor="@color/muted" android:textSize="11sp"/>
+                    </LinearLayout>
+                    <EditText android:id="@+id/et_meta_garantia" android:layout_width="120dp" android:layout_height="40dp"
+                        android:background="@drawable/input_bg" android:paddingHorizontal="10dp" android:hint="0"
+                        android:textColor="@color/text" android:textColorHint="@color/muted" android:inputType="numberDecimal" android:gravity="end"/>
+                </LinearLayout>
+
+                <!-- Seguro -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔒 Seguro" android:textColor="@color/text" android:textSize="14sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Meta em R$" android:textColor="@color/muted" android:textSize="11sp"/>
+                    </LinearLayout>
+                    <EditText android:id="@+id/et_meta_seguro" android:layout_width="120dp" android:layout_height="40dp"
+                        android:background="@drawable/input_bg" android:paddingHorizontal="10dp" android:hint="0"
+                        android:textColor="@color/text" android:textColorHint="@color/muted" android:inputType="numberDecimal" android:gravity="end"/>
+                </LinearLayout>
+
+                <!-- PSD -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💻 PSD (Informática)" android:textColor="@color/text" android:textSize="14sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Meta em R$" android:textColor="@color/muted" android:textSize="11sp"/>
+                    </LinearLayout>
+                    <EditText android:id="@+id/et_meta_psd" android:layout_width="120dp" android:layout_height="40dp"
+                        android:background="@drawable/input_bg" android:paddingHorizontal="10dp" android:hint="0"
+                        android:textColor="@color/text" android:textColorHint="@color/muted" android:inputType="numberDecimal" android:gravity="end"/>
+                </LinearLayout>
+
+                <!-- Crediário -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💳 Crediário UME" android:textColor="@color/text" android:textSize="14sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Meta em R$" android:textColor="@color/muted" android:textSize="11sp"/>
+                    </LinearLayout>
+                    <EditText android:id="@+id/et_meta_crediario" android:layout_width="120dp" android:layout_height="40dp"
+                        android:background="@drawable/input_bg" android:paddingHorizontal="10dp" android:hint="0"
+                        android:textColor="@color/text" android:textColorHint="@color/muted" android:inputType="numberDecimal" android:gravity="end"/>
+                </LinearLayout>
+
+                <!-- Ar -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="16dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="❄️ Instalação Ar-cond." android:textColor="@color/text" android:textSize="14sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Meta em quantidade" android:textColor="@color/muted" android:textSize="11sp"/>
+                    </LinearLayout>
+                    <EditText android:id="@+id/et_meta_ar" android:layout_width="120dp" android:layout_height="40dp"
+                        android:background="@drawable/input_bg" android:paddingHorizontal="10dp" android:hint="0"
+                        android:textColor="@color/text" android:textColorHint="@color/muted" android:inputType="number" android:gravity="end"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_salvar_metas"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="💾  Salvar metas"
+                    android:textStyle="bold"
+                    android:background="@drawable/btn_primary"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Dias Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/card"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📅  Dias úteis no mês"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text"
+                    android:layout_marginBottom="16dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total de dias úteis" android:textColor="@color/text" android:textSize="14sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Quantos dias você trabalha este mês" android:textColor="@color/muted" android:textSize="11sp"/>
+                    </LinearLayout>
+                    <EditText android:id="@+id/et_dias_uteis" android:layout_width="80dp" android:layout_height="40dp"
+                        android:background="@drawable/input_bg" android:paddingHorizontal="10dp" android:hint="22"
+                        android:textColor="@color/text" android:textColorHint="@color/muted" android:inputType="number" android:gravity="end"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="16dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dias úteis já passados" android:textColor="@color/text" android:textSize="14sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Quantos dias úteis já se passaram" android:textColor="@color/muted" android:textSize="11sp"/>
+                    </LinearLayout>
+                    <EditText android:id="@+id/et_dias_passados" android:layout_width="80dp" android:layout_height="40dp"
+                        android:background="@drawable/input_bg" android:paddingHorizontal="10dp" android:hint="0"
+                        android:textColor="@color/text" android:textColorHint="@color/muted" android:inputType="number" android:gravity="end"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_salvar_dias"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="💾  Salvar dias"
+                    android:textStyle="bold"
+                    android:background="@drawable/btn_primary"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.ramsons.metas.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"/>
+
+    <fragment
+        android:id="@+id/lancarFragment"
+        android:name="com.ramsons.metas.ui.lancar.LancarFragment"
+        android:label="Lançar Venda"/>
+
+    <fragment
+        android:id="@+id/historicoFragment"
+        android:name="com.ramsons.metas.ui.historico.HistoricoFragment"
+        android:label="Histórico"/>
+
+    <fragment
+        android:id="@+id/configFragment"
+        android:name="com.ramsons.metas.ui.config.ConfigFragment"
+        android:label="Configurações"/>
+
+</navigation>
